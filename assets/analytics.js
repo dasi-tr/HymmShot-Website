@@ -73,6 +73,26 @@
   document.addEventListener('click', trackDownload);
   document.addEventListener('auxclick', trackDownload);
 
+  document.addEventListener('click', function (event) {
+    if (!event.target || typeof event.target.closest !== 'function') return;
+    const commercialLink = event.target.closest('a[data-commercial-cta]');
+    if (commercialLink) {
+      sendEvent('commercial_interest_click', {
+        cta_location: commercialLink.dataset.commercialCta,
+        page_path: pagePath(),
+        contact_type: 'commercial_license'
+      });
+      return;
+    }
+    const demoLink = event.target.closest('a[data-demo-cta]');
+    if (demoLink) {
+      sendEvent('demo_cta_click', {
+        cta_location: demoLink.dataset.demoCta,
+        page_path: pagePath()
+      });
+    }
+  });
+
   function trackProductVideo() {
     const video = document.querySelector('video[data-analytics-video]');
     if (!video) return;
