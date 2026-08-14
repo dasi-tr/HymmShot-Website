@@ -5,7 +5,7 @@ Static staging/test website for HymmShot 1.0.0, a Windows scrolling screenshot a
 ## Product
 
 - Scrolling capture in Windows applications
-- Capture Issue Review and targeted recapture
+- Capture Issue Review with detected locations, Previous / Next, Hide issues and Recapture
 - Open and edit existing PNG images
 - Privacy-focused pixelation/redaction, crop, highlight, drawing, shapes, markers and text
 - Image saving and continuous single-page PDF export
