@@ -106,6 +106,7 @@
     .nav-links a { text-decoration: none; color: #34485b; }
     .nav-links a:hover { color: var(--teal-dark); }
     .nav-download {
+      display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
       color: #fff !important; background: var(--navy); padding: 10px 16px; border-radius: 12px;
       box-shadow: 0 9px 24px rgba(11,23,40,.17);
     }
@@ -147,11 +148,15 @@
     .btn-primary { background: #fff; color: var(--navy); box-shadow: 0 15px 30px rgba(0,0,0,.18); }
     .btn-secondary { border-color: rgba(255,255,255,.26); background: rgba(255,255,255,.06); color: #fff; }
     .microcopy { margin-top: 18px; color: #d7e3ea; font-size: .92rem; font-weight: 550; line-height: 1.6; }
+    .microcopy strong { color: #fff; font-weight: 800; }
     .brand-tagline { margin: 18px 0 0; color: #8ff4ef; font-size: 1rem; font-weight: 850; letter-spacing: .01em; }
     .hero-commercial { margin: 17px 0 0; color: #d7e3ea; font-size: .92rem; font-weight: 650; }
     .hero-commercial a, .commercial-link { color: inherit; font-weight: 850; text-underline-offset: 3px; }
     .trust-line { margin: 12px 0 0; color: #cfe0e7; font-size: .88rem; font-weight: 650; }
 
+    .windows-icon { width: 17px; height: 17px; flex: 0 0 auto; }
+    .windows-icon rect { fill: currentColor; }
+    .nav-download .windows-icon { width: 14px; height: 14px; }
     .windows-points {
       display: flex; flex-wrap: wrap; gap: 9px 18px; margin: 22px 0 0; padding: 0;
       list-style: none; color: #e0ebf0; font-size: .94rem; font-weight: 700;
@@ -382,7 +387,7 @@
         <a href="#capture">Scrolling capture</a>
         <a href="#editor">Built-in editor</a>
         <a href="#how">How it works</a>
-        <a class="nav-download" data-download-cta="nav" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)">Get HymmShot</a>
+        <a class="nav-download" data-download-cta="nav" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot</a>
       </div>
     </div>
   </nav>
@@ -396,9 +401,10 @@
           <p class="hero-copy">HymmShot captures long pages and Windows content as <strong>one continuous image</strong>. Then you can edit it, hide private information, add notes and save or export it.</p>
           <p class="brand-tagline">Capture more. Share with confidence.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="hero" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)">Get HymmShot</a>
+            <a class="btn btn-primary" data-download-cta="hero" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot for Windows</a>
             <a class="btn btn-secondary" data-demo-cta="hero" href="#demo"><span aria-hidden="true">▶</span> Watch the real demo</a>
           </div>
+          <p class="microcopy"><strong>Free for personal use</strong> · Available on Microsoft Store</p>
           <p class="hero-commercial">Professional or commercial use? <a data-commercial-cta="hero" href="mailto:contact@hymmshot.com">Contact us →</a></p>
           <p class="trust-line">Complete screenshot workflow for Windows · Desktop app · HymmShot 1.0.0 · Available on Microsoft Store</p>
         </div>
@@ -567,7 +573,7 @@
           <h2>One long scroll. One share-ready result.</h2>
           <p>If you regularly share long Windows content, HymmShot removes the manual screenshot-and-stitch workflow.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="final_cta" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)">Get HymmShot for Windows</a>
+            <a class="btn btn-primary" data-download-cta="final_cta" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot for Windows</a>
           </div>
           <p class="cta-commercial">Professional or commercial use requires a license. <a class="commercial-link" data-commercial-cta="final_cta" href="mailto:contact@hymmshot.com">Contact us →</a></p>
         </div>
