@@ -12,9 +12,7 @@ Static staging/test website for HymmShot 1.0.0, a Windows scrolling screenshot a
 
 ## Download
 
-https://github.com/dasi-tr/PanoramiX-Releases/releases/download/V1.0.0/HymmShot-Setup-1.0.0.exe
-
-The release repository intentionally retains its historical `PanoramiX-Releases` name.
+https://apps.microsoft.com/detail/9n6580jqmpw8
 
 ## Staging safety
 
@@ -24,7 +22,7 @@ This repository is for staging and review. It intentionally has no `CNAME` and m
 
 - `index.html` — homepage and embedded demo media
 - `docs.html` — HymmShot 1.0.0 documentation
-- `security.html` — official download and Windows SmartScreen notice
+- `security.html` — official Microsoft Store and security reporting information
 - `privacy.html` — website privacy notice
 - `changelog.html` — 1.0.0 release notes
 - `version.json` — current product version

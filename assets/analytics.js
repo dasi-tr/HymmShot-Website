@@ -4,7 +4,7 @@
   window.__hymmshotAnalyticsLoaded = true;
 
   const measurementId = 'G-DZDDHW8FY1';
-  const installerName = 'HymmShot-Setup-1.0.0.exe';
+  const storeProductId = '9n6580jqmpw8';
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
 
@@ -29,14 +29,14 @@
 
   function pagePath() { return window.location.pathname || '/'; }
 
-  function trackDownload(event) {
+  function trackMicrosoftStoreClick(event) {
     if (event.type === 'auxclick' && event.button !== 1) return;
     if (!event.target || typeof event.target.closest !== 'function') return;
     const link = event.target.closest('a[data-download-cta]');
-    if (!link || !link.href || !link.href.includes(installerName)) return;
+    if (!link || !link.href || !link.href.includes('apps.microsoft.com/detail/' + storeProductId)) return;
     const parameters = {
       cta_location: link.dataset.downloadCta,
-      download_file: installerName,
+      store_product_id: storeProductId,
       app_version: '1.0.0',
       page_path: pagePath(),
       link_url: link.href
@@ -47,7 +47,7 @@
       (!link.target || link.target.toLowerCase() === '_self');
 
     if (!normalSameTabClick) {
-      sendEvent('download_click', parameters);
+      sendEvent('microsoft_store_click', parameters);
       return;
     }
 
@@ -63,15 +63,15 @@
     }
 
     fallbackTimer = window.setTimeout(navigateOnce, 200);
-    sendEvent('download_click', Object.assign({}, parameters, {
+    sendEvent('microsoft_store_click', Object.assign({}, parameters, {
       event_callback: navigateOnce,
       event_timeout: 175,
       transport_type: 'beacon'
     }));
   }
 
-  document.addEventListener('click', trackDownload);
-  document.addEventListener('auxclick', trackDownload);
+  document.addEventListener('click', trackMicrosoftStoreClick);
+  document.addEventListener('auxclick', trackMicrosoftStoreClick);
 
   document.addEventListener('click', function (event) {
     if (!event.target || typeof event.target.closest !== 'function') return;

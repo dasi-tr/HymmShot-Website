@@ -29,7 +29,7 @@
     "softwareVersion": "1.0.0",
     "description": "HymmShot is a complete screenshot workflow for Windows: capture long scrollable content or open an existing PNG, then review, edit, protect and export a share-ready result.",
     "url": "https://hymmshot.com/",
-    "downloadUrl": "https://github.com/dasi-tr/PanoramiX-Releases/releases/download/V1.0.0/HymmShot-Setup-1.0.0.exe",
+    "downloadUrl": "https://apps.microsoft.com/detail/9n6580jqmpw8",
     "featureList": [
       "Scrolling screenshot capture for Windows applications",
       "Combines scrolled content into one continuous image",
@@ -152,8 +152,6 @@
     .hero-commercial a, .commercial-link { color: inherit; font-weight: 850; text-underline-offset: 3px; }
     .trust-line { margin: 12px 0 0; color: #cfe0e7; font-size: .88rem; font-weight: 650; }
 
-    .windows-icon { width: 17px; height: 17px; flex: 0 0 auto; }
-    .windows-icon rect { fill: currentColor; }
     .windows-points {
       display: flex; flex-wrap: wrap; gap: 9px 18px; margin: 22px 0 0; padding: 0;
       list-style: none; color: #e0ebf0; font-size: .94rem; font-weight: 700;
@@ -293,16 +291,6 @@
     .path-card h3 { margin: 8px 0 10px; }
     .path-flow { margin: 0; color: #43586a; font-weight: 750; line-height: 1.8; }
 
-    .security { padding-top: 0; }
-    .security-card {
-      display: grid; grid-template-columns: auto 1fr; gap: 17px; align-items: center;
-      background: #f8faf9; border: 1px solid var(--line); border-radius: 18px; padding: 18px 21px;
-    }
-    .security-icon { width: 42px; height: 42px; border-radius: 13px; background: #edf7f6; display: grid; place-items: center; font-size: 1.15rem; }
-    .security-card h2 { margin: 0 0 4px; font-size: 1rem; }
-    .security-card p { margin: 0; color: #685f3a; font-size: .94rem; }
-    .security-code { white-space: nowrap; font-weight: 850; color: #4d4526; background: #fff; border: 1px solid #ead991; padding: 10px 13px; border-radius: 11px; }
-
     .hebrew { background: linear-gradient(135deg, #effbfb, #f8fbfc); }
     .rtl { direction: rtl; text-align: right; }
     .rtl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 34px; }
@@ -364,8 +352,6 @@
       .after-frame { height: 520px; }
       .editor-inset { position: relative; right: auto; bottom: auto; width: 88%; margin: 14px auto -8px; transform: none; }
       .capture-proof-caption { font-size: .76rem; gap: 6px; }
-      .security-card { grid-template-columns: auto 1fr; }
-      .security-code { grid-column: 1 / -1; text-align: center; white-space: normal; }
       .demo-note, .footer-inner { align-items: flex-start; flex-direction: column; }
       .actions .btn { width: 100%; }
       .nav-inner { min-height: 64px; }
@@ -396,7 +382,7 @@
         <a href="#capture">Scrolling capture</a>
         <a href="#editor">Built-in editor</a>
         <a href="#how">How it works</a>
-        <a class="nav-download" data-download-cta="nav" href="https://github.com/dasi-tr/PanoramiX-Releases/releases/download/V1.0.0/HymmShot-Setup-1.0.0.exe">Download Windows app</a>
+        <a class="nav-download" data-download-cta="nav" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)">Get HymmShot</a>
       </div>
     </div>
   </nav>
@@ -410,11 +396,11 @@
           <p class="hero-copy">HymmShot captures long pages and Windows content as <strong>one continuous image</strong>. Then you can edit it, hide private information, add notes and save or export it.</p>
           <p class="brand-tagline">Capture more. Share with confidence.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="hero" href="https://github.com/dasi-tr/PanoramiX-Releases/releases/download/V1.0.0/HymmShot-Setup-1.0.0.exe" aria-label="Download HymmShot 1.0.0 free for personal use"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Download free for personal use <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-primary" data-download-cta="hero" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)">Get HymmShot</a>
             <a class="btn btn-secondary" data-demo-cta="hero" href="#demo"><span aria-hidden="true">▶</span> Watch the real demo</a>
           </div>
           <p class="hero-commercial">Professional or commercial use? <a data-commercial-cta="hero" href="mailto:contact@hymmshot.com">Contact us →</a></p>
-          <p class="trust-line">Complete screenshot workflow for Windows · Desktop app · HymmShot 1.0.0 · Official GitHub download</p>
+          <p class="trust-line">Complete screenshot workflow for Windows · Desktop app · HymmShot 1.0.0 · Available on Microsoft Store</p>
         </div>
 
         <div class="product-shot outcome-visual" aria-label="Real comparison showing four separate screenshots becoming one continuous screenshot with HymmShot">
@@ -559,15 +545,6 @@
       </div>
     </section>
 
-    <section class="security">
-      <div class="container reveal">
-        <div class="security-card">
-          <div class="security-icon" aria-hidden="true">🛡️</div>
-          <div><h2>Windows SmartScreen notice</h2><p>HymmShot is currently unsigned, so Windows may show an unrecognized-app warning during installation. Download only from the official HymmShot release. <a href="security.html">Read the security details.</a></p></div>
-        </div>
-      </div>
-    </section>
-
     <section id="faq">
       <div class="container reveal">
         <span class="section-kicker">Frequently asked questions</span>
@@ -580,7 +557,6 @@
           <details><summary>Can I protect sensitive information?</summary><p>Yes. Use pixelation or redaction for selected passwords, names, IDs, email addresses, private text and confidential values before sharing.</p></details>
           <details><summary>Can I export the long screenshot to PDF?</summary><p>Yes. HymmShot can export the result as a clean, continuous single-page PDF.</p></details>
           <details><summary>What happens if a long capture needs attention?</summary><p>HymmShot can show detected issue locations. Use Previous / Next to review them, hide the issue indicators, or choose Recapture when needed.</p></details>
-          <details><summary>Why might Windows SmartScreen show a warning?</summary><p>HymmShot 1.0.0 is currently unsigned. Windows may show an unrecognized-app warning, so download only from the official HymmShot release.</p></details>
         </div>
       </div>
     </section>
@@ -591,7 +567,7 @@
           <h2>One long scroll. One share-ready result.</h2>
           <p>If you regularly share long Windows content, HymmShot removes the manual screenshot-and-stitch workflow.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="final_cta" href="https://github.com/dasi-tr/PanoramiX-Releases/releases/download/V1.0.0/HymmShot-Setup-1.0.0.exe">Download free for personal use ↓</a>
+            <a class="btn btn-primary" data-download-cta="final_cta" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)">Get HymmShot for Windows</a>
           </div>
           <p class="cta-commercial">Professional or commercial use requires a license. <a class="commercial-link" data-commercial-cta="final_cta" href="mailto:contact@hymmshot.com">Contact us →</a></p>
         </div>
