@@ -1,13 +1,13 @@
 # HymmShot Website
 
-Static staging/test website for HymmShot 1.0.0, a Windows scrolling screenshot and image editing tool.
+Static staging/test website for HymmShot Public Beta, a Windows scrolling screenshot and image editing tool.
 
 ## Product
 
 - Scrolling capture in Windows applications
 - Capture Issue Review with detected locations, Previous / Next, Hide issues and Recapture
 - Open and edit existing PNG images
-- Privacy-focused pixelation/redaction, crop, highlight, drawing, shapes, markers and text
+- Privacy-focused pixelation/blur, crop, highlight, drawing, shapes, markers and text
 - Image saving and continuous single-page PDF export
 
 ## Download
@@ -21,8 +21,8 @@ This repository is for staging and review. It intentionally has no `CNAME` and m
 ## Files
 
 - `index.html` — homepage and embedded demo media
-- `docs.html` — HymmShot 1.0.0 documentation
+- `docs.html` — HymmShot Public Beta documentation
 - `security.html` — official Microsoft Store and security reporting information
 - `privacy.html` — website privacy notice
-- `changelog.html` — 1.0.0 release notes
+- `changelog.html` — Public Beta release notes
 - `version.json` — current product version

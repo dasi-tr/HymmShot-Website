@@ -26,7 +26,6 @@
     "name": "HymmShot",
     "operatingSystem": "Windows",
     "applicationCategory": "UtilitiesApplication",
-    "softwareVersion": "1.0.0",
     "description": "HymmShot is a complete screenshot workflow for Windows: capture long scrollable content or open an existing PNG, then review, edit, protect and export a share-ready result.",
     "url": "https://hymmshot.com/",
     "downloadUrl": "https://apps.microsoft.com/detail/9n6580jqmpw8",
@@ -148,7 +147,7 @@
     .btn-secondary { border-color: rgba(255,255,255,.26); background: rgba(255,255,255,.06); color: #fff; }
     .microcopy { margin-top: 18px; color: #d7e3ea; font-size: .92rem; font-weight: 550; line-height: 1.6; }
     .microcopy strong { color: #fff; font-weight: 800; }
-    .microcopy a, .commercial-link { color: inherit; font-weight: 850; text-underline-offset: 3px; }
+    .microcopy a { color: inherit; font-weight: 850; text-underline-offset: 3px; }
 
     .windows-icon { width: 17px; height: 17px; flex: 0 0 auto; }
     .windows-icon rect { fill: currentColor; }
@@ -247,6 +246,21 @@
     .section-title { margin: 10px 0 16px; font-size: clamp(2rem, 4vw, 3.45rem); line-height: 1.08; letter-spacing: -.045em; }
     .section-lead { margin: 0; color: var(--muted); font-size: 1.08rem; max-width: 730px; }
 
+    .beta-notice-section { padding: 32px 0 0; }
+    .beta-notice {
+      display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start;
+      padding: 24px 26px; border: 1px solid #b8dddd; border-radius: 20px;
+      background: linear-gradient(135deg, #effcfc, #fff); box-shadow: 0 14px 36px rgba(15,61,72,.07);
+    }
+    .beta-badge {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 0 11px;
+      border-radius: 999px; background: #d9f7f6; color: #087778;
+      font-size: .75rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+    }
+    .beta-notice h2 { margin: 0 0 5px; font-size: 1.1rem; letter-spacing: -.015em; }
+    .beta-notice p { margin: 0; color: var(--muted); }
+    .beta-feedback { display: inline-block; margin-top: 8px; color: #087778; font-weight: 800; text-underline-offset: 3px; }
+
     .demo-wrap { margin-top: 38px; background: var(--panel); border: 1px solid var(--line); border-radius: 26px; padding: 14px; box-shadow: var(--shadow); }
     .demo-video {
       display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 18px;
@@ -319,7 +333,7 @@
     .cta-box h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -.045em; }
     .cta-box p { margin: 14px auto 25px; color: #c3d1d9; max-width: 620px; }
     .cta-box .actions { justify-content: center; margin-top: 0; }
-    .cta-commercial { margin: 18px 0 0 !important; color: #dce8ed !important; font-size: .94rem; }
+    .cta-note { margin: 18px 0 0 !important; color: #dce8ed !important; font-size: .94rem; }
 
     footer { padding: 40px 0 55px; color: var(--muted); }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid var(--line); padding-top: 25px; }
@@ -355,6 +369,7 @@
       .editor-inset { position: relative; right: auto; bottom: auto; width: 88%; margin: 14px auto -8px; transform: none; }
       .capture-proof-caption { font-size: .76rem; gap: 6px; }
       .demo-note, .footer-inner { align-items: flex-start; flex-direction: column; }
+      .beta-notice { grid-template-columns: 1fr; padding: 21px; }
       .actions .btn { width: 100%; }
       .nav-inner { min-height: 64px; }
       .brand-mark { width: 35px; height: 35px; }
@@ -384,7 +399,7 @@
         <a href="#capture">Scrolling capture</a>
         <a href="#editor">Built-in editor</a>
         <a href="#how">How it works</a>
-        <a class="nav-download" data-download-cta="nav" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot</a>
+        <a class="nav-download" data-download-cta="nav" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot Beta on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot Beta</a>
       </div>
     </div>
   </nav>
@@ -393,14 +408,14 @@
     <header class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">HymmShot for Windows</div>
+          <div class="eyebrow">HymmShot Public Beta · Windows</div>
           <h1>Capture the whole page <span class="hero-highlight">in one screenshot.</span></h1>
           <p class="hero-copy">HymmShot captures long pages and Windows content as <strong>one continuous image</strong>. Then you can edit it, hide private information, add notes and save or export it.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="hero" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot for Windows</a>
+            <a class="btn btn-primary" data-download-cta="hero" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot Beta on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot Beta</a>
             <a class="btn btn-secondary" data-demo-cta="hero" href="#demo"><span aria-hidden="true">▶</span> Watch the real demo</a>
           </div>
-          <p class="microcopy"><strong>Free for personal use</strong> · Available on Microsoft Store · Commercial use? <a data-commercial-cta="hero" href="mailto:contact@hymmshot.com">Contact us →</a></p>
+          <p class="microcopy"><strong>Free during Public Beta</strong> · Available on Microsoft Store</p>
         </div>
 
         <div class="product-shot outcome-visual" aria-label="Real comparison showing four separate screenshots becoming one continuous screenshot with HymmShot">
@@ -429,13 +444,13 @@
         <div class="product-shot" hidden>
           <div class="product-shot-top">
             <span class="windows-app-badge"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> HymmShot for Windows</span>
-            <span class="real-interface">Version 1.0.0</span>
+            <span class="real-interface">Public Beta</span>
           </div>
-          <div class="hymmshot-preview" role="img" aria-label="HymmShot 1.0.0 product preview for Windows">
+          <div class="hymmshot-preview" role="img" aria-label="HymmShot Public Beta product preview for Windows">
             <div class="hymmshot-preview-card">
               <div class="hymmshot-preview-brand">
                 <img src="icon.png" alt="">
-                <div><strong>HymmShot 1.0.0</strong><span>Scrolling capture and image editing</span></div>
+                <div><strong>HymmShot Public Beta</strong><span>Scrolling capture and image editing</span></div>
               </div>
               <div class="hymmshot-preview-status">Ready for a scrolling capture</div>
               <div class="hymmshot-preview-tools" aria-hidden="true"><span>Capture</span><span>Review</span><span>Edit</span><span>Export</span></div>
@@ -456,6 +471,19 @@
         </div>
       </div>
     </header>
+
+    <section class="beta-notice-section" aria-labelledby="beta-notice-title">
+      <div class="container reveal">
+        <div class="beta-notice">
+          <span class="beta-badge">Public Beta</span>
+          <div>
+            <h2 id="beta-notice-title">HymmShot is currently in Public Beta.</h2>
+            <p>Core capture, editing and export features are available now. We’re still improving stitching quality, and some complex or dynamic scrolling content may produce visible stitching artifacts.</p>
+            <a class="beta-feedback" href="mailto:contact@hymmshot.com?subject=HymmShot%20capture%20issue%20feedback">Found a capture issue? Send us feedback →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="demo">
       <div class="container reveal">
@@ -551,10 +579,11 @@
         <h2 class="section-title">The practical details.</h2>
         <div class="faq-list">
           <details><summary>What does HymmShot actually do?</summary><p>HymmShot captures content that is longer than your screen as one continuous screenshot. After capturing, you can edit the image, hide private information, add annotations and save or export it.</p></details>
-          <details><summary>Is HymmShot free to use?</summary><p>HymmShot is free for personal use. Professional or commercial use requires a license. <a data-commercial-cta="faq" href="mailto:contact@hymmshot.com">Contact contact@hymmshot.com</a> for licensing options.</p></details>
+          <details><summary>Is HymmShot still in Beta?</summary><p>Yes. HymmShot is currently in active Public Beta. Core capture, editing, privacy and export features are available now, while we continue improving long-capture stitching, especially on complex or dynamic content.</p></details>
+          <details><summary>Is HymmShot free?</summary><p>Yes. HymmShot is free to use during the Public Beta. Pricing may change after the Beta as the product becomes more mature, and any future pricing changes will be communicated clearly.</p></details>
           <details><summary>Does HymmShot work outside the browser?</summary><p>Yes. It is designed for scrollable areas in Windows applications, including browsers, IDEs, Terminal, CMD, logs, chats and other windows.</p></details>
           <details><summary>Can I edit a screenshot I already have?</summary><p>Yes. You do not have to capture it with HymmShot. Open an existing PNG, edit it, hide private information, add notes and export it.</p></details>
-          <details><summary>Can I protect sensitive information?</summary><p>Yes. Use pixelation or redaction for selected passwords, names, IDs, email addresses, private text and confidential values before sharing.</p></details>
+          <details><summary>Can I protect sensitive information?</summary><p>Yes. Use pixelation or blur for selected passwords, names, IDs, email addresses, private text and confidential values before sharing.</p></details>
           <details><summary>Can I export the long screenshot to PDF?</summary><p>Yes. HymmShot can export the result as a clean, continuous single-page PDF.</p></details>
           <details><summary>What happens if a long capture needs attention?</summary><p>HymmShot can show detected issue locations. Use Previous / Next to review them, hide the issue indicators, or choose Recapture when needed.</p></details>
         </div>
@@ -567,9 +596,9 @@
           <h2>One long scroll. One share-ready result.</h2>
           <p>If you regularly share long Windows content, HymmShot removes the manual screenshot-and-stitch workflow.</p>
           <div class="actions">
-            <a class="btn btn-primary" data-download-cta="final_cta" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot for Windows on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot for Windows</a>
+            <a class="btn btn-primary" data-download-cta="final_cta" href="https://apps.microsoft.com/detail/9n6580jqmpw8" target="_blank" rel="noopener noreferrer" aria-label="Get HymmShot Beta on Microsoft Store (opens in a new tab)"><svg class="windows-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1"/><rect x="11" y="1" width="8" height="8" rx="1"/><rect x="1" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/></svg> Get HymmShot Beta</a>
           </div>
-          <p class="cta-commercial">Professional or commercial use requires a license. <a class="commercial-link" data-commercial-cta="final_cta" href="mailto:contact@hymmshot.com">Contact us →</a></p>
+          <p class="cta-note">Free during Public Beta.</p>
         </div>
       </div>
     </section>
@@ -577,7 +606,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <div><div>Built in public by Hadassa Goodman · HymmShot 1.0.0 · © 2026</div><div class="footer-license">Free for personal use. Professional or commercial use requires a license. <a data-commercial-cta="footer" href="mailto:contact@hymmshot.com">Contact us.</a></div></div>
+      <div><div>Built in public by Hadassa Goodman · HymmShot Public Beta · © 2026</div><div class="footer-license">Free during Public Beta.</div></div>
       <div class="footer-links">
         <a href="docs.html">Documentation</a>
         <a href="security.html">Security</a>

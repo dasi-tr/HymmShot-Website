@@ -35,6 +35,7 @@
     const link = event.target.closest('a[data-download-cta]');
     if (!link || !link.href || !link.href.includes('apps.microsoft.com/detail/' + storeProductId)) return;
     const parameters = {
+      download_destination: 'microsoft_store',
       cta_location: link.dataset.downloadCta,
       store_product_id: storeProductId,
       app_version: '1.0.0',
@@ -47,7 +48,7 @@
       (!link.target || link.target.toLowerCase() === '_self');
 
     if (!normalSameTabClick) {
-      sendEvent('microsoft_store_click', parameters);
+      sendEvent('download_click', parameters);
       return;
     }
 
@@ -63,7 +64,7 @@
     }
 
     fallbackTimer = window.setTimeout(navigateOnce, 200);
-    sendEvent('microsoft_store_click', Object.assign({}, parameters, {
+    sendEvent('download_click', Object.assign({}, parameters, {
       event_callback: navigateOnce,
       event_timeout: 175,
       transport_type: 'beacon'
@@ -75,15 +76,6 @@
 
   document.addEventListener('click', function (event) {
     if (!event.target || typeof event.target.closest !== 'function') return;
-    const commercialLink = event.target.closest('a[data-commercial-cta]');
-    if (commercialLink) {
-      sendEvent('commercial_interest_click', {
-        cta_location: commercialLink.dataset.commercialCta,
-        page_path: pagePath(),
-        contact_type: 'commercial_license'
-      });
-      return;
-    }
     const demoLink = event.target.closest('a[data-demo-cta]');
     if (demoLink) {
       sendEvent('demo_cta_click', {
