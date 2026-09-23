@@ -230,3 +230,30 @@ section{padding:clamp(56px,8vw,104px) 0}
 .ba .arrow{font-size:2rem;color:var(--muted);text-align:center}
 .ba h3{font-size:1rem;color:var(--muted);margin-bottom:.8em}
 .steps{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+
+/* mini visual inside product cards */
+.product .mini{background:rgba(255,255,255,.65);border-radius:16px;padding:16px 18px;margin:4px 0 2px}
+.product .mini svg{width:100%;height:auto;display:block}
+
+/* comparison strip */
+.strip{margin-top:44px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);display:grid;grid-template-columns:1fr 1px 1fr;overflow:hidden}
+@media (max-width:820px){.strip{grid-template-columns:1fr}.strip .rule{height:1px;width:auto}}
+.strip .rule{background:var(--line)}
+.strip>div{padding:clamp(24px,3vw,34px)}
+.strip h3{font-size:1.05rem;margin-bottom:.2em}
+.strip p{color:var(--muted);font-size:.98rem;margin:0 0 18px}
+.strip svg{width:100%;height:auto}
+
+/* privacy band art */
+.band-grid.with-art{grid-template-columns:1fr 1fr}
+.band-art{margin-top:26px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:22px}
+.band-art svg{width:100%;height:auto}
+
+/* use case cards */
+.uses{gap:24px}
+.uses .use-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:12px}
+.uses .use-card .fi{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line)}
+.uses .use-card .fi svg{width:24px;height:24px}
+.uses .use-card h3{margin:0}
+.closing .statement{color:#94a6bd;font-size:.98rem;margin-top:28px}
+.strip .rule{padding:0}
